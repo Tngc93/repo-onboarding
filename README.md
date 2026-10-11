@@ -91,9 +91,9 @@ jobs:
 ## How it works
 
 ```mermaid
-flowchart LR
+flowchart TB
   subgraph repo["Your repository"]
-    direction TB
+    direction LR
     man["Manifests<br/>package.json · pyproject.toml · go.mod<br/>Cargo.toml · pom.xml · Gemfile …"]
     lock["Lockfiles<br/>pnpm-lock · uv.lock · poetry.lock …"]
     ci[".github/workflows/*.yml"]
@@ -102,7 +102,7 @@ flowchart LR
   end
 
   subgraph cli["repo-onboarding CLI · zero dependencies"]
-    direction TB
+    direction LR
     scan["scan<br/>facts per ecosystem"]
     render["render<br/>deterministic Markdown"]
     block["generated block<br/>sha-stamped markers"]
@@ -110,7 +110,7 @@ flowchart LR
   end
 
   subgraph docs["Agent guidance"]
-    direction TB
+    direction LR
     agents["AGENTS.md<br/>block + your text"]
     claude["CLAUDE.md<br/>@AGENTS.md"]
   end
