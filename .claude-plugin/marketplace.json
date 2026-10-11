@@ -1,0 +1,15 @@
+{
+  "name": "repo-onboarding",
+  "description": "Onboarding docs for AI coding agents",
+  "owner": {
+    "name": "Berk Arcak",
+    "url": "https://github.com/Tngc93"
+  },
+  "plugins": [
+    {
+      "name": "repo-onboarding",
+      "source": "./",
+      "description": "Generates AGENTS.md and CLAUDE.md from what the repository contains and warns at session start when they drift."
+    }
+  ]
+}

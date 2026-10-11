@@ -1,0 +1,48 @@
+{
+  "name": "repo-onboarding",
+  "version": "0.1.0",
+  "description": "Onboard AI coding agents to a repository: generate AGENTS.md and CLAUDE.md from what the repo actually contains, and catch when they drift.",
+  "type": "module",
+  "bin": {
+    "repo-onboarding": "cli/repo-onboarding.mjs"
+  },
+  "files": [
+    "cli",
+    "src",
+    "skills",
+    "hooks",
+    ".claude-plugin",
+    ".codex-plugin",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node cli/repo-onboarding.mjs check",
+    "docs:update": "node cli/repo-onboarding.mjs update"
+  },
+  "keywords": [
+    "agents-md",
+    "claude-md",
+    "claude-code",
+    "codex",
+    "ai-agents",
+    "onboarding",
+    "documentation",
+    "skills"
+  ],
+  "author": "Berk Arcak (https://github.com/Tngc93)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tngc93/repo-onboarding.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tngc93/repo-onboarding/issues"
+  },
+  "homepage": "https://github.com/Tngc93/repo-onboarding#readme"
+}

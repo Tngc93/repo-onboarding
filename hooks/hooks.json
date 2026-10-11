@@ -1,0 +1,17 @@
+{
+  "description": "repo-onboarding: at session start, tell Claude when AGENTS.md or CLAUDE.md no longer match the repository",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/cli/repo-onboarding.mjs\" hook session-start",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

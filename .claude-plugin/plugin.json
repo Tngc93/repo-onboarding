@@ -1,0 +1,13 @@
+{
+  "name": "repo-onboarding",
+  "version": "0.1.0",
+  "description": "Onboard AI coding agents to a repository: generate AGENTS.md and CLAUDE.md from what the repo contains, and get told when they drift.",
+  "author": {
+    "name": "Berk Arcak",
+    "url": "https://github.com/Tngc93"
+  },
+  "homepage": "https://github.com/Tngc93/repo-onboarding",
+  "repository": "https://github.com/Tngc93/repo-onboarding",
+  "license": "MIT",
+  "keywords": ["agents-md", "claude-md", "onboarding", "documentation", "skills"]
+}
