@@ -1,0 +1,13 @@
+{
+  "name": "repo-onboarding",
+  "version": "0.1.0",
+  "description": "Onboard Codex to a repository: generate AGENTS.md from what the repo contains and keep it true.",
+  "author": {
+    "name": "Berk Arcak",
+    "url": "https://github.com/Tngc93"
+  },
+  "homepage": "https://github.com/Tngc93/repo-onboarding",
+  "repository": "https://github.com/Tngc93/repo-onboarding",
+  "license": "MIT",
+  "skills": "./skills/"
+}

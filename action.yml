@@ -1,0 +1,32 @@
+name: repo-onboarding check
+description: Fail the build when AGENTS.md or CLAUDE.md no longer match the repository.
+author: Berk Arcak
+branding:
+  icon: book-open
+  color: blue
+inputs:
+  path:
+    description: Repository root to check.
+    default: "."
+  file:
+    description: Guidance file managed by repo-onboarding.
+    default: AGENTS.md
+  strict:
+    description: Also fail on warnings (placeholders left, missing paths, file too long).
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - name: Check agent guidance
+      shell: bash
+      env:
+        RO_PATH: ${{ inputs.path }}
+        RO_FILE: ${{ inputs.file }}
+        RO_STRICT: ${{ inputs.strict }}
+      run: |
+        args=(check "$RO_PATH" --file "$RO_FILE")
+        if [ "$RO_STRICT" = "true" ]; then args+=(--strict); fi
+        node "$GITHUB_ACTION_PATH/cli/repo-onboarding.mjs" "${args[@]}"
